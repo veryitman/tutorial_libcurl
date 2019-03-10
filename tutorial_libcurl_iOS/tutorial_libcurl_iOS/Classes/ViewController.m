@@ -12,7 +12,9 @@
 #import "HTTPGETHelper.h"
 #import "HTTPPOSTHelper.h"
 
-#define HOST_URL @"http://172.20.10.2:8080/user"
+#define HOST_URL     @"http://10.4.16.204:8080/"
+#define URL_USER     [NSString stringWithFormat:@"%@user", HOST_URL]
+#define URL_USERINFO [NSString stringWithFormat:@"%@userInfo", HOST_URL]
 
 @interface ViewController ()
 
@@ -79,22 +81,25 @@
 
 - (void)doHTTPGETToFileAction
 {
-    NSString *reqUrl = [NSString stringWithFormat:@"%@%@", HOST_URL, @"?id=1&name=veryitman"];
+    NSString *reqUrl = [NSString stringWithFormat:@"%@%@", URL_USER, @"?id=1&name=veryitman"];
+    NSLog(@"Req url: %@", reqUrl);
     const char *url = [reqUrl cStringUsingEncoding:NSUTF8StringEncoding];
     http_get_req(url);
 }
 
 - (void)doHTTPPOSTToFileAction
 {
-    const char *url = [HOST_URL cStringUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"Req url: %@", URL_USER);
+    const char *url = [URL_USERINFO cStringUsingEncoding:NSUTF8StringEncoding];
     const char *data = "id=2&name=veryitman";
     http_post_req(url, data);
 }
 
 - (void)doHTTPPOSTJSONAction
 {
-    const char *url = [HOST_URL cStringUsingEncoding:NSUTF8StringEncoding];
-    const char *data = "id=2&name=veryitman";
+    NSLog(@"Req url: %@", URL_USERINFO);
+    const char *url = [URL_USERINFO cStringUsingEncoding:NSUTF8StringEncoding];
+    const char *data = "uid=25";
     http_post_callback(url, data);
 }
 

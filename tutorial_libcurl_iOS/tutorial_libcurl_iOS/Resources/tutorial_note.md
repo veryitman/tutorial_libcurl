@@ -60,10 +60,80 @@
 5、CURLINFO_SPEED_DOWNLOAD 
 下载文件的平均速度
 
+## 
+
+1.  CURLOPT_WRITEFUNCTION，CURLOPT_WRITEDATA
+
+回调函数原型为：size_t function( void *ptr, size_t size, size_t nmemb, void *stream); 
+函数将在libcurl接收到数据后被调用，因此函数多做数据保存的功能，如处理下载文件。
+CURLOPT_WRITEDATA 用于表明CURLOPT_WRITEFUNCTION函数中的stream指针的来源。
+
+2.  CURLOPT_HEADERFUNCTION，CURLOPT_HEADERDATA
+
+回调函数原型为 size_t function( void *ptr, size_t size,size_t nmemb, void *stream); 
+libcurl一旦接收到http 头部数据后将调用该函数。
+CURLOPT_WRITEDATA 传递指针给libcurl，该指针表明CURLOPT_HEADERFUNCTION 函数的stream指针的来源。
+
+3.  CURLOPT_READFUNCTION CURLOPT_READDATA
+
+libCurl需要读取数据传递给远程主机时将调用CURLOPT_READFUNCTION指定的函数，函数原型是：size_t function(void *ptr, size_t size, size_t nmemb,void *stream). CURLOPT_READDATA 表明CURLOPT_READFUNCTION函数原型中的stream指针来源。
+
+4.  CURLOPT_NOPROGRESS，CURLOPT_PROGRESSFUNCTION，CURLOPT_PROGRESSDATA
+
+跟数据传输进度相关的参数。CURLOPT_PROGRESSFUNCTION 指定的函数正常情况下每秒被libcurl调用一次，为了使CURLOPT_PROGRESSFUNCTION被调用，CURLOPT_NOPROGRESS必须被设置为false，CURLOPT_PROGRESSDATA指定的参数将作为CURLOPT_PROGRESSFUNCTION指定函数的第一个参数
+
+5.  CURLOPT_TIMEOUT，CURLOPT_CONNECTIONTIMEOUT:
+
+CURLOPT_TIMEOUT 由于设置传输时间，CURLOPT_CONNECTIONTIMEOUT 设置连接等待时间
+
+6.  CURLOPT_FOLLOWLOCATION
+
+设置重定位URL
+
+CURLOPT_RANGE: CURLOPT_RESUME_FROM:
+
+断点续传相关设置。CURLOPT_RANGE 指定char *参数传递给libcurl，用于指明http域的RANGE头域，例如：
+
+表示头500个字节：bytes=0-499
+
+表示第二个500字节：bytes=500-999
+
+表示最后500个字节：bytes=-500
+
+表示500字节以后的范围：bytes=500-
+
+第一个和最后一个字节：bytes=0-0,-1
+
+同时指定几个范围：bytes=500-600,601-999
+
+CURLOPT_RESUME_FROM 传递一个long参数给libcurl，指定你希望开始传递的偏移量。
+
+
+## curl_easy_perform 函数说明（error 状态码）
+
+1.  CURLE_OK
+任务完成  
+
+2 .  CURLE_UNSUPPORTED_PROTOCOL
+不支持的协议，由URL的头部指定
+
+3 .  CURLE_COULDNT_CONNECT
+不能连接到remote 主机或者代理
+
+4 .  CURLE_REMOTE_ACCESS_DENIED
+访问被拒绝
+
+5 .  CURLE_HTTP_RETURNED_ERROR
+Http返回错误
+
+6 .  CURLE_READ_ERROR
+读本地文件错误
 
 ## json
 
 json-c-0.13.1-20180305
 
 [All Release](https://github.com/json-c/json-c/releases)
+
+
 

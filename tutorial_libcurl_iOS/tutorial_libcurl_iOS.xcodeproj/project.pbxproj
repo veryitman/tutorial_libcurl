@@ -37,21 +37,6 @@
 		4D051672222A9A1500AECBB0 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcurl.a; sourceTree = "<group>"; };
 		4D051675222AE2A000AECBB0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4D29136D2233E79600766432 /* libjson-c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libjson-c.a"; sourceTree = "<group>"; };
-		4D2913702233E7A600766432 /* printbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = printbuf.h; sourceTree = "<group>"; };
-		4D2913712233E7A600766432 /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
-		4D2913722233E7A600766432 /* json_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_util.h; sourceTree = "<group>"; };
-		4D2913732233E7A600766432 /* json_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_config.h; sourceTree = "<group>"; };
-		4D2913742233E7A600766432 /* json_pointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_pointer.h; sourceTree = "<group>"; };
-		4D2913752233E7A600766432 /* json_visit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_visit.h; sourceTree = "<group>"; };
-		4D2913762233E7A600766432 /* json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
-		4D2913772233E7A600766432 /* json_c_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_c_version.h; sourceTree = "<group>"; };
-		4D2913782233E7A600766432 /* arraylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arraylist.h; sourceTree = "<group>"; };
-		4D2913792233E7A600766432 /* linkhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linkhash.h; sourceTree = "<group>"; };
-		4D29137A2233E7A600766432 /* json_tokener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_tokener.h; sourceTree = "<group>"; };
-		4D29137B2233E7A600766432 /* json_object_iterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_object_iterator.h; sourceTree = "<group>"; };
-		4D29137C2233E7A600766432 /* json_inttypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_inttypes.h; sourceTree = "<group>"; };
-		4D29137D2233E7A600766432 /* bits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bits.h; sourceTree = "<group>"; };
-		4D29137E2233E7A600766432 /* json_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_object.h; sourceTree = "<group>"; };
 		4D2913802233E7C400766432 /* stdcheaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdcheaders.h; sourceTree = "<group>"; };
 		4D2913822233E7C400766432 /* mprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprintf.h; sourceTree = "<group>"; };
 		4D2913832233E7C400766432 /* easy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easy.h; sourceTree = "<group>"; };
@@ -120,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				4D29137F2233E7C400766432 /* curl */,
-				4D29136F2233E7A600766432 /* json-c */,
 				4DE239D02232AC7000FB2D28 /* HTTP */,
 				4D051654222A995B00AECBB0 /* AppDelegate.h */,
 				4D051657222A995B00AECBB0 /* AppDelegate.m */,
@@ -146,28 +130,6 @@
 				4D051675222AE2A000AECBB0 /* libz.tbd */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4D29136F2233E7A600766432 /* json-c */ = {
-			isa = PBXGroup;
-			children = (
-				4D2913782233E7A600766432 /* arraylist.h */,
-				4D29137D2233E7A600766432 /* bits.h */,
-				4D2913712233E7A600766432 /* debug.h */,
-				4D2913772233E7A600766432 /* json_c_version.h */,
-				4D2913732233E7A600766432 /* json_config.h */,
-				4D29137C2233E7A600766432 /* json_inttypes.h */,
-				4D29137B2233E7A600766432 /* json_object_iterator.h */,
-				4D29137E2233E7A600766432 /* json_object.h */,
-				4D2913742233E7A600766432 /* json_pointer.h */,
-				4D29137A2233E7A600766432 /* json_tokener.h */,
-				4D2913722233E7A600766432 /* json_util.h */,
-				4D2913752233E7A600766432 /* json_visit.h */,
-				4D2913762233E7A600766432 /* json.h */,
-				4D2913792233E7A600766432 /* linkhash.h */,
-				4D2913702233E7A600766432 /* printbuf.h */,
-			);
-			path = "json-c";
 			sourceTree = "<group>";
 		};
 		4D29137F2233E7C400766432 /* curl */ = {
