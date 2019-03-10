@@ -8,10 +8,17 @@
 
 #import "ViewController.h"
 #import "curl/curl.h"
+#import "HTTPPOSTJSONHelper.h"
+#import "HTTPGETHelper.h"
+#import "HTTPPOSTHelper.h"
 
 #define HOST_URL @"http://172.20.10.2:8080/user"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSMutableArray *dataSources;
 
 @end
 
@@ -20,128 +27,83 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.dataSources = [@[@"GET", @"POST", @"POST-JSON"] mutableCopy];
 }
 
-- (IBAction)doHTTPGETToFileAction:(id)sender
+#pragma mark - UITableViewDatasource.
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dataSources.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"Cell";
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", self.dataSources[indexPath.row]];
+
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate.
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    NSString *cText = [self.dataSources objectAtIndex:indexPath.row];
+    if ([@"GET" isEqualToString:cText]) {
+        [self doHTTPGETToFileAction];
+    } else if ([@"POST" isEqualToString:cText]) {
+        [self doHTTPPOSTToFileAction];
+    } else if ([@"POST-JSON" isEqualToString:cText]) {
+        [self doHTTPPOSTJSONAction];
+    } else {
+        NSLog(@"Nothing to do...");
+    }
+}
+
+#pragma mark - Action.
+
+- (void)doHTTPGETToFileAction
 {
     NSString *reqUrl = [NSString stringWithFormat:@"%@%@", HOST_URL, @"?id=1&name=veryitman"];
     const char *url = [reqUrl cStringUsingEncoding:NSUTF8StringEncoding];
     http_get_req(url);
 }
 
-- (IBAction)doHTTPPOSTToFileAction:(id)sender
+- (void)doHTTPPOSTToFileAction
 {
     const char *url = [HOST_URL cStringUsingEncoding:NSUTF8StringEncoding];
     const char *data = "id=2&name=veryitman";
     http_post_req(url, data);
 }
 
-#pragma mark - C
-
-/**
- *  获取沙盒文件路径
- *
- *  @param fileName 存储响应数据的文件名称
- */
-const char * rspDataPath(NSString *fileName)
+- (void)doHTTPPOSTJSONAction
 {
-    if (fileName.length <= 0) {
-        fileName = @"tmp";
-    }
-
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentPath = [paths firstObject];
-    NSString *filePath = [documentPath stringByAppendingPathComponent:fileName];
-    const char *fpath = [filePath cStringUsingEncoding:NSUTF8StringEncoding];
-
-    NSLog(@"Response data filePath : %s", fpath);
-
-    return fpath;
+    const char *url = [HOST_URL cStringUsingEncoding:NSUTF8StringEncoding];
+    const char *data = "id=2&name=veryitman";
+    http_post_callback(url, data);
 }
 
-void http_get_req(const char *url)
+- (NSMutableArray *)dataSources
 {
-    CURL *curl;
-
-    const char *fpath = rspDataPath(@"http_get_rsp_data.log");
-
-    FILE *fp;
-    fp = fopen(fpath, "wt+");
-
-    struct curl_slist *headers = NULL;
-    //增加HTTP header
-    headers = curl_slist_append(headers, "Accept:application/json");
-    headers = curl_slist_append(headers, "Content-Type:application/json");
-    headers = curl_slist_append(headers, "charset:utf-8");
-
-    //初始化
-    curl = curl_easy_init();
-
-    if (curl) {
-        //改协议头
-        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
-        curl_easy_setopt(curl, CURLOPT_URL, url);
-
-        curl_easy_setopt(curl, CURLOPT_POST, url);
-
-        //wt+：读写打开或着建立一个文本文件；允许读写
-        if (NULL != fp) {
-            // 请求结果写入到文件当中
-            curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
-        }
-
-        CURLcode rsp_code = curl_easy_perform(curl);
-        if (CURLE_OK == rsp_code) {
-            NSLog(@"请求返回成功");
-        } else {
-            NSLog(@"请求返回失败，返回码是 %i", rsp_code);
-        }
-
-        curl_slist_free_all(headers);
-
-        curl_easy_cleanup(curl);
+    if (nil == _dataSources) {
+        _dataSources = [[NSMutableArray alloc] init];
     }
-
-    fclose(fp);
-}
-
-void http_post_req(const char *url, const char *req_data)
-{
-    const char *fpath = rspDataPath(@"http_post_rsp_data.log");
-
-    FILE *fp;
-    fp = fopen(fpath, "wt+");
-
-    CURL *curl;
-    curl = curl_easy_init();
-
-    if (curl) {
-        curl_easy_setopt(curl, CURLOPT_URL, url);
-
-        NSLog(@"length: %ld", strlen(req_data));
-
-        /* size of the POST data */
-        curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE, strlen(req_data) + 1);
-
-        /* pass in a pointer to the data - libcurl will not copy */
-        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, req_data);
-
-        if (NULL != fp) {
-            // 请求结果写入到文件当中
-            curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
-        }
-
-        CURLcode rsp_code = curl_easy_perform(curl);
-        if (CURLE_OK == rsp_code) {
-            NSLog(@"请求返回成功");
-        } else {
-            NSLog(@"请求返回失败，返回码是 %i", rsp_code);
-        }
-
-        curl_easy_cleanup(curl);
-    }
-
-    fclose(fp);
+    return _dataSources;
 }
 
 @end

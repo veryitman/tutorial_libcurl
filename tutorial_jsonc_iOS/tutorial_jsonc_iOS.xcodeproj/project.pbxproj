@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D2913C522340A6500766432 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2913C422340A6500766432 /* AppDelegate.m */; };
+		4D2913C822340A6500766432 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2913C722340A6500766432 /* ViewController.m */; };
+		4D2913CB22340A6500766432 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2913C922340A6500766432 /* Main.storyboard */; };
+		4D2913CD22340A6600766432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D2913CC22340A6600766432 /* Assets.xcassets */; };
+		4D2913D022340A6600766432 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2913CE22340A6600766432 /* LaunchScreen.storyboard */; };
+		4D2913D322340A6600766432 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2913D222340A6600766432 /* main.m */; };
+		4D2913ED22340B1900766432 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2913EC22340B1900766432 /* libz.tbd */; };
+		4D2913EF22340B2300766432 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2913EE22340B2300766432 /* libc++.tbd */; };
+		4D29141A2234EFA300766432 /* json_tokener.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D2914032234EF9D00766432 /* json_tokener.c */; };
+		4D29141B2234EFA300766432 /* json_object_iterator.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D2914042234EF9E00766432 /* json_object_iterator.c */; };
+		4D29141C2234EFA300766432 /* libjson.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D2914062234EF9E00766432 /* libjson.c */; };
+		4D29141D2234EFA300766432 /* json_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D2914072234EF9E00766432 /* json_util.c */; };
+		4D29141E2234EFA300766432 /* json_c_version.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D2914082234EF9E00766432 /* json_c_version.c */; };
+		4D29141F2234EFA300766432 /* json_visit.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D29140A2234EF9E00766432 /* json_visit.c */; };
+		4D2914202234EFA300766432 /* strerror_override.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D29140B2234EF9E00766432 /* strerror_override.c */; };
+		4D2914212234EFA300766432 /* debug.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D29140D2234EF9E00766432 /* debug.c */; };
+		4D2914222234EFA300766432 /* linkhash.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D29140E2234EF9E00766432 /* linkhash.c */; };
+		4D2914232234EFA300766432 /* json_object.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D29140F2234EF9E00766432 /* json_object.c */; };
+		4D2914242234EFA300766432 /* json_pointer.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D2914102234EF9F00766432 /* json_pointer.c */; };
+		4D2914252234EFA300766432 /* printbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D2914112234EF9F00766432 /* printbuf.c */; };
+		4D2914282234EFA300766432 /* random_seed.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D2914152234EF9F00766432 /* random_seed.c */; };
+		4D2914292234EFA300766432 /* arraylist.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D2914172234EF9F00766432 /* arraylist.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D2913FB2234149000766432 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4D2913C022340A6500766432 /* tutorial_jsonc_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutorial_jsonc_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D2913C322340A6500766432 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4D2913C422340A6500766432 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4D2913C622340A6500766432 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4D2913C722340A6500766432 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4D2913CA22340A6500766432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D2913CC22340A6600766432 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D2913CF22340A6600766432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D2913D122340A6600766432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D2913D222340A6600766432 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4D2913DA22340AB400766432 /* printbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = printbuf.h; sourceTree = "<group>"; };
+		4D2913DB22340AB400766432 /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
+		4D2913DC22340AB400766432 /* json_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_util.h; sourceTree = "<group>"; };
+		4D2913DD22340AB400766432 /* json_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_config.h; sourceTree = "<group>"; };
+		4D2913DE22340AB400766432 /* json_pointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_pointer.h; sourceTree = "<group>"; };
+		4D2913DF22340AB400766432 /* json_visit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_visit.h; sourceTree = "<group>"; };
+		4D2913E022340AB400766432 /* json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
+		4D2913E122340AB400766432 /* json_c_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_c_version.h; sourceTree = "<group>"; };
+		4D2913E222340AB400766432 /* arraylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arraylist.h; sourceTree = "<group>"; };
+		4D2913E322340AB400766432 /* linkhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linkhash.h; sourceTree = "<group>"; };
+		4D2913E422340AB400766432 /* json_tokener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_tokener.h; sourceTree = "<group>"; };
+		4D2913E522340AB400766432 /* json_object_iterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_object_iterator.h; sourceTree = "<group>"; };
+		4D2913E622340AB400766432 /* json_inttypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_inttypes.h; sourceTree = "<group>"; };
+		4D2913E722340AB400766432 /* bits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bits.h; sourceTree = "<group>"; };
+		4D2913E822340AB400766432 /* json_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_object.h; sourceTree = "<group>"; };
+		4D2913EC22340B1900766432 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		4D2913EE22340B2300766432 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		4D2914012234EF9D00766432 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		4D2914022234EF9D00766432 /* random_seed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = random_seed.h; sourceTree = "<group>"; };
+		4D2914032234EF9D00766432 /* json_tokener.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = json_tokener.c; sourceTree = "<group>"; };
+		4D2914042234EF9E00766432 /* json_object_iterator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = json_object_iterator.c; sourceTree = "<group>"; };
+		4D2914052234EF9E00766432 /* snprintf_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snprintf_compat.h; sourceTree = "<group>"; };
+		4D2914062234EF9E00766432 /* libjson.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libjson.c; sourceTree = "<group>"; };
+		4D2914072234EF9E00766432 /* json_util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = json_util.c; sourceTree = "<group>"; };
+		4D2914082234EF9E00766432 /* json_c_version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = json_c_version.c; sourceTree = "<group>"; };
+		4D2914092234EF9E00766432 /* math_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = math_compat.h; sourceTree = "<group>"; };
+		4D29140A2234EF9E00766432 /* json_visit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = json_visit.c; sourceTree = "<group>"; };
+		4D29140B2234EF9E00766432 /* strerror_override.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strerror_override.c; sourceTree = "<group>"; };
+		4D29140C2234EF9E00766432 /* strerror_override.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strerror_override.h; sourceTree = "<group>"; };
+		4D29140D2234EF9E00766432 /* debug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = debug.c; sourceTree = "<group>"; };
+		4D29140E2234EF9E00766432 /* linkhash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = linkhash.c; sourceTree = "<group>"; };
+		4D29140F2234EF9E00766432 /* json_object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = json_object.c; sourceTree = "<group>"; };
+		4D2914102234EF9F00766432 /* json_pointer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = json_pointer.c; sourceTree = "<group>"; };
+		4D2914112234EF9F00766432 /* printbuf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = printbuf.c; sourceTree = "<group>"; };
+		4D2914132234EF9F00766432 /* vasprintf_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vasprintf_compat.h; sourceTree = "<group>"; };
+		4D2914152234EF9F00766432 /* random_seed.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = random_seed.c; sourceTree = "<group>"; };
+		4D2914162234EF9F00766432 /* strerror_override_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strerror_override_private.h; sourceTree = "<group>"; };
+		4D2914172234EF9F00766432 /* arraylist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = arraylist.c; sourceTree = "<group>"; };
+		4D2914182234EF9F00766432 /* strdup_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strdup_compat.h; sourceTree = "<group>"; };
+		4D2914192234EFA200766432 /* json_object_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_object_private.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D2913BD22340A6500766432 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D2913EF22340B2300766432 /* libc++.tbd in Frameworks */,
+				4D2913ED22340B1900766432 /* libz.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D2913B722340A6500766432 = {
+			isa = PBXGroup;
+			children = (
+				4D2913C222340A6500766432 /* tutorial_jsonc_iOS */,
+				4D2913C122340A6500766432 /* Products */,
+				4D2913EB22340B1900766432 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4D2913C122340A6500766432 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D2913C022340A6500766432 /* tutorial_jsonc_iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D2913C222340A6500766432 /* tutorial_jsonc_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4D2913D922340AB400766432 /* json-c */,
+				4D2913C322340A6500766432 /* AppDelegate.h */,
+				4D2913C422340A6500766432 /* AppDelegate.m */,
+				4D2913C622340A6500766432 /* ViewController.h */,
+				4D2913C722340A6500766432 /* ViewController.m */,
+				4D2913C922340A6500766432 /* Main.storyboard */,
+				4D2913CC22340A6600766432 /* Assets.xcassets */,
+				4D2913CE22340A6600766432 /* LaunchScreen.storyboard */,
+				4D2913D122340A6600766432 /* Info.plist */,
+				4D2913D222340A6600766432 /* main.m */,
+			);
+			path = tutorial_jsonc_iOS;
+			sourceTree = "<group>";
+		};
+		4D2913D922340AB400766432 /* json-c */ = {
+			isa = PBXGroup;
+			children = (
+				4D2914172234EF9F00766432 /* arraylist.c */,
+				4D2913E222340AB400766432 /* arraylist.h */,
+				4D2913E722340AB400766432 /* bits.h */,
+				4D2914012234EF9D00766432 /* config.h */,
+				4D29140D2234EF9E00766432 /* debug.c */,
+				4D2913DB22340AB400766432 /* debug.h */,
+				4D2914082234EF9E00766432 /* json_c_version.c */,
+				4D2913E122340AB400766432 /* json_c_version.h */,
+				4D2913DD22340AB400766432 /* json_config.h */,
+				4D2913E622340AB400766432 /* json_inttypes.h */,
+				4D2914042234EF9E00766432 /* json_object_iterator.c */,
+				4D2913E522340AB400766432 /* json_object_iterator.h */,
+				4D2914192234EFA200766432 /* json_object_private.h */,
+				4D29140F2234EF9E00766432 /* json_object.c */,
+				4D2913E822340AB400766432 /* json_object.h */,
+				4D2914102234EF9F00766432 /* json_pointer.c */,
+				4D2913DE22340AB400766432 /* json_pointer.h */,
+				4D2914032234EF9D00766432 /* json_tokener.c */,
+				4D2913E422340AB400766432 /* json_tokener.h */,
+				4D2914072234EF9E00766432 /* json_util.c */,
+				4D2913DC22340AB400766432 /* json_util.h */,
+				4D29140A2234EF9E00766432 /* json_visit.c */,
+				4D2913DF22340AB400766432 /* json_visit.h */,
+				4D2913E022340AB400766432 /* json.h */,
+				4D2914062234EF9E00766432 /* libjson.c */,
+				4D29140E2234EF9E00766432 /* linkhash.c */,
+				4D2913E322340AB400766432 /* linkhash.h */,
+				4D2914092234EF9E00766432 /* math_compat.h */,
+				4D2914112234EF9F00766432 /* printbuf.c */,
+				4D2913DA22340AB400766432 /* printbuf.h */,
+				4D2914152234EF9F00766432 /* random_seed.c */,
+				4D2914022234EF9D00766432 /* random_seed.h */,
+				4D2914052234EF9E00766432 /* snprintf_compat.h */,
+				4D2914182234EF9F00766432 /* strdup_compat.h */,
+				4D2914162234EF9F00766432 /* strerror_override_private.h */,
+				4D29140B2234EF9E00766432 /* strerror_override.c */,
+				4D29140C2234EF9E00766432 /* strerror_override.h */,
+				4D2914132234EF9F00766432 /* vasprintf_compat.h */,
+			);
+			path = "json-c";
+			sourceTree = "<group>";
+		};
+		4D2913EB22340B1900766432 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D2913EE22340B2300766432 /* libc++.tbd */,
+				4D2913EC22340B1900766432 /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D2913BF22340A6500766432 /* tutorial_jsonc_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D2913D622340A6600766432 /* Build configuration list for PBXNativeTarget "tutorial_jsonc_iOS" */;
+			buildPhases = (
+				4D2913BC22340A6500766432 /* Sources */,
+				4D2913BD22340A6500766432 /* Frameworks */,
+				4D2913BE22340A6500766432 /* Resources */,
+				4D2913FB2234149000766432 /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tutorial_jsonc_iOS;
+			productName = tutorial_jsonc_iOS;
+			productReference = 4D2913C022340A6500766432 /* tutorial_jsonc_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D2913B822340A6500766432 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = veryitman;
+				TargetAttributes = {
+					4D2913BF22340A6500766432 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 4D2913BB22340A6500766432 /* Build configuration list for PBXProject "tutorial_jsonc_iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D2913B722340A6500766432;
+			productRefGroup = 4D2913C122340A6500766432 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D2913BF22340A6500766432 /* tutorial_jsonc_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D2913BE22340A6500766432 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D2913D022340A6600766432 /* LaunchScreen.storyboard in Resources */,
+				4D2913CD22340A6600766432 /* Assets.xcassets in Resources */,
+				4D2913CB22340A6500766432 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D2913BC22340A6500766432 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D2914232234EFA300766432 /* json_object.c in Sources */,
+				4D2914202234EFA300766432 /* strerror_override.c in Sources */,
+				4D29141F2234EFA300766432 /* json_visit.c in Sources */,
+				4D29141D2234EFA300766432 /* json_util.c in Sources */,
+				4D29141A2234EFA300766432 /* json_tokener.c in Sources */,
+				4D2914292234EFA300766432 /* arraylist.c in Sources */,
+				4D29141E2234EFA300766432 /* json_c_version.c in Sources */,
+				4D2913C822340A6500766432 /* ViewController.m in Sources */,
+				4D2914242234EFA300766432 /* json_pointer.c in Sources */,
+				4D2914212234EFA300766432 /* debug.c in Sources */,
+				4D29141B2234EFA300766432 /* json_object_iterator.c in Sources */,
+				4D2913D322340A6600766432 /* main.m in Sources */,
+				4D2914222234EFA300766432 /* linkhash.c in Sources */,
+				4D2914252234EFA300766432 /* printbuf.c in Sources */,
+				4D2913C522340A6500766432 /* AppDelegate.m in Sources */,
+				4D29141C2234EFA300766432 /* libjson.c in Sources */,
+				4D2914282234EFA300766432 /* random_seed.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4D2913C922340A6500766432 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D2913CA22340A6500766432 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4D2913CE22340A6600766432 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D2913CF22340A6600766432 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D2913D422340A6600766432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4D2913D522340A6600766432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D2913D722340A6600766432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GR78TT232F;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = tutorial_jsonc_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/tutorial_jsonc_iOS",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.veryitman.mz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D2913D822340A6600766432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GR78TT232F;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = tutorial_jsonc_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/tutorial_jsonc_iOS",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.veryitman.mz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D2913BB22340A6500766432 /* Build configuration list for PBXProject "tutorial_jsonc_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D2913D422340A6600766432 /* Debug */,
+				4D2913D522340A6600766432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D2913D622340A6600766432 /* Build configuration list for PBXNativeTarget "tutorial_jsonc_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D2913D722340A6600766432 /* Debug */,
+				4D2913D822340A6600766432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4D2913B822340A6500766432 /* Project object */;
+}

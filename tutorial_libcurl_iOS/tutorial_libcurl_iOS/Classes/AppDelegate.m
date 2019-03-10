@@ -19,7 +19,15 @@
 {
     // 初始化其内部所有模块
     // 应用程序启动初始化一次即可
-    curl_global_init(CURL_GLOBAL_ALL);
+    CURLcode res = curl_global_init(CURL_GLOBAL_ALL);
+    
+    /* Check for errors */
+    if (CURLE_OK != res) {
+        fprintf(stderr, "curl_global_init() failed: %s\n", curl_easy_strerror(res));
+    }
+    
+    char *msld[] = {"msld", "sdk", "support"};
+    NSLog(@"%s, %c, %c", msld[2], *msld[2], *(msld[2]));
     
     return YES;
 }
@@ -48,7 +56,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    curl_global_cleanup();
 }
 
 @end
